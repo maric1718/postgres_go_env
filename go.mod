@@ -1,4 +1,4 @@
-module a
+module airways
 
 go 1.16
 
