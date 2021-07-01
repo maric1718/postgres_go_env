@@ -1,18 +1,11 @@
 package main
 
 import (
-	"airways/api"
-
-	"github.com/gin-gonic/gin"
+	"airways/repository"
 )
 
 func main() {
-	r := gin.Default()
 
-	adminAPI := r.Group("/admin")
-	{
-		adminAPI.GET("/test", api.TestAdminAPI)
-	}
+	repository.ConnectToDatabase()
 
-	r.Run(":3000")
 }
